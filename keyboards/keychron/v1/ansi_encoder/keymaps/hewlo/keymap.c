@@ -269,7 +269,13 @@ bool rgb_matrix_indicators_user(void) {
 }
 
 bool dip_switch_update_user(uint8_t index, bool active) {
-    layer_invert(FN_3);
+    if (active) {
+      layer_clear();
+      layer_on(BASE);
+    } else {
+        layer_clear();
+        layer_on(FN_3);
+    }
 
     return true;
 }
