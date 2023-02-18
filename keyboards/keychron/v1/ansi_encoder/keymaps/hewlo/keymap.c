@@ -270,11 +270,11 @@ bool rgb_matrix_indicators_user(void) {
 
 bool dip_switch_update_user(uint8_t index, bool active) {
     if (active) {
-      layer_clear();
-      layer_on(BASE);
-    } else {
         layer_clear();
         layer_on(FN_3);
+    } else {
+        layer_clear();
+        layer_on(BASE);
     }
 
     return true;
