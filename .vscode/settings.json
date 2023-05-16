@@ -23,5 +23,10 @@
         "**/*.hex": true,
         "**/*.bin": true,
         "**/*.uf2": true
-    }
+    },
+    "python.formatting.provider": "yapf",
+    "[json]": {
+        "editor.formatOnSave": false
+    },
+    "clangd.arguments": ["--header-insertion=never"]
 }
